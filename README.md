@@ -1,1 +1,1 @@
-# https://postolenko.github.io/chinacliniс
+# https://postolenko.github.io/chinaclinik
