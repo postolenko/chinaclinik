@@ -6,10 +6,50 @@ $(document).ready(function() {
     // var oddThumbnail = document.getElementsByClassName("testimonial-txt")[1];
 
     // oddThumbnail.styleText = "background:rgba(158, 137, 112, .8); margin:30px 0 0 -20px";
-                       
+    
+// 
+
+    var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
+
+// 
+
+$(window).resize( function() {
+
+    bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
+
+    if(bodyWidth >= 768) {
+
     $(".testimonial-txt:odd").css({"background": "rgba(158, 137, 112, .8)",
-                                    "margin":"30px 0 0 -20px"
-                                });
+                                        "margin":"30px 0 0 -20px"
+                                    });
+    } else {
+
+        $(".testimonial-txt:odd").css({"background": "rgba(158, 137, 112, .8)",
+                                        "margin":"0"
+                                    });
+    }
+
+});
+
+    if(bodyWidth >= 768) {
+
+        $(".testimonial-txt:odd").css({"background": "rgba(158, 137, 112, .8)",
+                                        "margin":"30px 0 0 -20px"
+                                    });
+
+    } else {
+
+        $(".testimonial-txt:odd").css({"background": "rgba(158, 137, 112, .8)",
+                                        "margin":"0"
+                                    });
+
+    }
+
+
 
     // document.getElementsByClassName("testimonial-txt")[1].styleText = "border-top: 35px solid rgba(0, 0, 0, .8)";
 
@@ -17,17 +57,30 @@ $(document).ready(function() {
 
     // $(".testimonial-txt:odd").css({"border-top": "35px solid rgba(158, 137, 112, .8)"});
 
-    var pseudo = document.querySelector(".testimonial-txt");
-    result = getComputedStyle(pseudo,":after").content;
+    // var pseudo = document.querySelector(".testimonial-txt");
+    // result = getComputedStyle(pseudo,":after").content;
 
-    console.log(result +"   "+getComputedStyle(pseudo,":after"));
+    // console.log(result +"   "+getComputedStyle(pseudo,":after"));
 
     // var obj = getComputedStyle(pseudo,":after");
 
     // obj.style.borderTop = "35px solid rgba(158, 137, 112, .8)";
 
 
+$(window).resize(function() {
 
+    $(".top-triangle").css({"border-left":$(".main-navigation").width() + 20 + "px solid transparent"});
+    $(".left-triangle").css({"border-top":$(".main-navigation").outerHeight(true) + "px solid #507323"});
+
+$(".right-triangle").css({"border-top": ( $(".main-navigation").outerHeight(true)) + "px solid #507323"});
+
+});
+
+$(".top-triangle").css({"border-left":$(".main-navigation").width() + 20 + "px solid transparent"});
+
+$(".left-triangle").css({"border-top":$(".main-navigation").outerHeight(true) + "px solid #507323"});
+
+$(".right-triangle").css({"border-top": ( $(".main-navigation").outerHeight(true)) + "px solid #507323"});
 
 
 
