@@ -16,9 +16,40 @@
 	
 	<link rel="stylesheet" type="text/css" href="style.css">
 
-	<!-- <link rel="stylesheet" type="text/css" href="responsive.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="js/flexslider.css"> -->
+
+	<link rel="stylesheet" type="text/css" href="responsive.css">
 
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
+
+	<script src="js/jquery.flexslider.js"></script>
+
+		<script type="text/javascript">
+			$(window).load(function() {
+
+				$('.news_slider').flexslider({
+					animation: "slide",
+					animationLoop: false,
+					itemWidth: 280,
+					itemMargin: 40,
+					minItems: 1,
+					maxItems: 3
+				});
+
+
+				$('.testimonials_slider').flexslider({
+					animation: "slide",
+					animationLoop: false,
+					itemWidth: 480,
+					itemMargin: 0,
+					minItems: 1,
+					maxItems: 2
+
+				});
+
+
+			});
+		</script>
 
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">
 	
@@ -234,79 +265,124 @@
 
 						</div>
 
-						<div class="news-slider clearfix">
+						<div class="carousel-box">
 
-							<div class="news-slide">
+							<div class="carousel">
 								
-								<div class="news-date">22.10.2014  1</div>
+							</div>
 
-								<h3 class="news-head-slide">Подарки для всех при покупке электроталей</h3>
+						</div>
 
-								<p class="news-paragraph">Дорогие друзья сообщаем о нашей традиционной новогодней акции! Оформив почтовый или курьерский заказ на игры от Мира Хобби общей суммой 2000 рублей или выше. Вы получите случайный подарок, вместе со всеми заказанными товарами.</p>
+						<div class="news-slider-box">
+
+							<div class="news_slider carousel">
+
+							<ul class="slides">
+								<li>
+
+									<div class="news">
+									
+										<div class="news-date">22.10.2014  1</div>
+
+										<h3 class="news-head-slide">Подарки для всех при покупке электроталей</h3>
+
+										<p class="news-paragraph">Дорогие друзья сообщаем о нашей традиционной новогодней акции! Оформив почтовый или курьерский заказ на игры от Мира Хобби общей суммой 2000 рублей или выше. Вы получите случайный подарок, вместе со всеми заказанными товарами.</p>
+
+									</div>
+
+								</li>
+
+								<!-- </div>
+
+								<div class="news-slide"> -->
+								<li>
+
+									<div class="news">
+									
+										<div class="news-date">22.10.2014  2</div>
+
+										<h3 class="news-head-slide">Подарки для всех при покупке электроталей</h3>
+
+										<p class="news-paragraph">Дорогие друзья сообщаем о нашей традиционной новогодней акции! Оформив почтовый или курьерский заказ на игры от Мира Хобби общей суммой 2000 рублей или выше. Вы получите случайный подарок, вместе со всеми заказанными товарами.</p>
+
+									</div>
+</li>
+								<!-- </div>
+
+								<div class="news-slide"> -->
+<li>
+									<div class="news">
+										
+										<div class="news-date">22.10.2014  3</div>
+
+										<h3 class="news-head-slide">Подарки для всех при покупке электроталей</h3>
+
+										<p class="news-paragraph">Дорогие друзья сообщаем о нашей традиционной новогодней акции! Оформив почтовый или курьерский заказ на игры от Мира Хобби общей суммой 2000 рублей или выше. Вы получите случайный подарок, вместе со всеми заказанными товарами.</p>
+
+									</div>
+</li>
+								<!-- </div>
+
+								<div class="news-slide"> -->
+<li>
+									<div class="news">
+										
+										<div class="news-date">22.10.2014   4</div>
+
+										<h3 class="news-head-slide">Подарки для всех при покупке электроталей</h3>
+
+										<p class="news-paragraph">Дорогие друзья сообщаем о нашей традиционной новогодней акции! Оформив почтовый или курьерский заказ на игры от Мира Хобби общей суммой 2000 рублей или выше. Вы получите случайный подарок, вместе со всеми заказанными товарами.</p>
+
+									</div>
+</li>
+								<!-- </div>
+
+								<div class="news-slide"> -->
+<li>
+									<div class="news">
+										
+										<div class="news-date">22.10.2014   5</div>
+
+										<h3 class="news-head-slide">Подарки для всех при покупке электроталей</h3>
+
+										<p class="news-paragraph">Дорогие друзья сообщаем о нашей традиционной новогодней акции! Оформив почтовый или курьерский заказ на игры от Мира Хобби общей суммой 2000 рублей или выше. Вы получите случайный подарок, вместе со всеми заказанными товарами.</p>
+
+									</div>
+</li>
+								<!-- </div>
+
+								<div class="news-slide"> -->
+<li>
+									<div class="news">
+										
+										<div class="news-date">22.10.2014  6</div>
+
+										<h3 class="news-head-slide">Подарки для всех при покупке электроталей</h3>
+
+										<p class="news-paragraph">Дорогие друзья сообщаем о нашей традиционной новогодней акции! Оформив почтовый или курьерский заказ на игры от Мира Хобби общей суммой 2000 рублей или выше. Вы получите случайный подарок, вместе со всеми заказанными товарами.</p>
+
+									</div>
+</li>
+								<!-- </div>
+
+								<div class="news-slide"> -->
+<li>
+									<div class="news">
+										
+										<div class="news-date">22.10.2014   7</div>
+
+										<h3 class="news-head-slide">Подарки для всех при покупке электроталей</h3>
+
+										<p class="news-paragraph">Дорогие друзья сообщаем о нашей традиционной новогодней акции! Оформив почтовый или курьерский заказ на игры от Мира Хобби общей суммой 2000 рублей или выше. Вы получите случайный подарок, вместе со всеми заказанными товарами.</p>
+
+									</div>
+</li>
+								<!-- </div> -->
+</ul>
+								
 
 							</div>
 
-							<div class="news-slide">
-								
-								<div class="news-date">22.10.2014  2</div>
-
-								<h3 class="news-head-slide">Подарки для всех при покупке электроталей</h3>
-
-								<p class="news-paragraph">Дорогие друзья сообщаем о нашей традиционной новогодней акции! Оформив почтовый или курьерский заказ на игры от Мира Хобби общей суммой 2000 рублей или выше. Вы получите случайный подарок, вместе со всеми заказанными товарами.</p>
-
-							</div>
-
-							<div class="news-slide">
-								
-								<div class="news-date">22.10.2014  3</div>
-
-								<h3 class="news-head-slide">Подарки для всех при покупке электроталей</h3>
-
-								<p class="news-paragraph">Дорогие друзья сообщаем о нашей традиционной новогодней акции! Оформив почтовый или курьерский заказ на игры от Мира Хобби общей суммой 2000 рублей или выше. Вы получите случайный подарок, вместе со всеми заказанными товарами.</p>
-
-							</div>
-
-							<div class="news-slide">
-								
-								<div class="news-date">22.10.2014   4</div>
-
-								<h3 class="news-head-slide">Подарки для всех при покупке электроталей</h3>
-
-								<p class="news-paragraph">Дорогие друзья сообщаем о нашей традиционной новогодней акции! Оформив почтовый или курьерский заказ на игры от Мира Хобби общей суммой 2000 рублей или выше. Вы получите случайный подарок, вместе со всеми заказанными товарами.</p>
-
-							</div>
-
-							<div class="news-slide">
-								
-								<div class="news-date">22.10.2014   5</div>
-
-								<h3 class="news-head-slide">Подарки для всех при покупке электроталей</h3>
-
-								<p class="news-paragraph">Дорогие друзья сообщаем о нашей традиционной новогодней акции! Оформив почтовый или курьерский заказ на игры от Мира Хобби общей суммой 2000 рублей или выше. Вы получите случайный подарок, вместе со всеми заказанными товарами.</p>
-
-							</div>
-
-							<div class="news-slide">
-								
-								<div class="news-date">22.10.2014  6</div>
-
-								<h3 class="news-head-slide">Подарки для всех при покупке электроталей</h3>
-
-								<p class="news-paragraph">Дорогие друзья сообщаем о нашей традиционной новогодней акции! Оформив почтовый или курьерский заказ на игры от Мира Хобби общей суммой 2000 рублей или выше. Вы получите случайный подарок, вместе со всеми заказанными товарами.</p>
-
-							</div>
-
-							<div class="news-slide">
-								
-								<div class="news-date">22.10.2014   7</div>
-
-								<h3 class="news-head-slide">Подарки для всех при покупке электроталей</h3>
-
-								<p class="news-paragraph">Дорогие друзья сообщаем о нашей традиционной новогодней акции! Оформив почтовый или курьерский заказ на игры от Мира Хобби общей суммой 2000 рублей или выше. Вы получите случайный подарок, вместе со всеми заказанными товарами.</p>
-
-							</div>
-
-							
 						</div>
 
 					</div>
@@ -325,55 +401,179 @@
 
 						<h3>Наши клиенты пишут о нас</h3>
 
-						<div class="testimonials-slider">
+						<div class="testimonials_slider carousel testimonials-slider-box">
 
-							<div class="testimonial-sl">
+							<button class="glyphicon testimonial-prev"></button>
 
-								<p class="testimonial-txt">Несмотря на сложности, искусство синхронизирует трансцендентальный гений. Партисипативное планирование нетривиально. Галактика, как следует из вышесказанного, рефлектирует трансцендентальный побочный PR-эффект.</p>
+							<ul class="slides">
 
-								<div class="testimonial-client">
+								<li>
 
+									<div class="testimonial-sl">
 
-									<div class="client-photo-box">
-										<img class="client-photo" src="img/testimonial_photo.png" alt="Фото клиента">
-									</div>
+										<p class="testimonial-txt">Несмотря на сложности, искусство синхронизирует трансцендентальный гений. Партисипативное планирование нетривиально. Галактика, как следует из вышесказанного, рефлектирует трансцендентальный побочный PR-эффект.</p>
+										<div class="quote-triangle"></div>
 
-									<div class="client-info">
-
-										<p class="client-name">Андрей Николаев</p>
-										<p class="client-adress">г. Москва</p>
-
-									</div>
-
-								</div>
-
-							</div>
+										<div class="testimonial-client">
 
 
-							<div class="testimonial-sl">
+											<div class="client-photo-box">
+												<img class="client-photo" src="img/testimonial_photo.png" alt="Фото клиента">
+											</div>
 
-								<p class="testimonial-txt">Несмотря на сложности, искусство синхронизирует трансцендентальный гений. Партисипативное планирование нетривиально. Галактика, как следует из вышесказанного, рефлектирует трансцендентальный побочный PR-эффект.</p>
+											<div class="client-info">
 
-								<div class="testimonial-client">
+												<p class="client-name">Андрей Николаев</p>
+												<p class="client-adress">г. Москва</p>
 
+											</div>
 
-									<div class="client-photo-box">
-										<img class="client-photo" src="img/testimonial_photo.png" alt="Фото клиента">
-									</div>
-
-									<div class="client-info">
-
-										<p class="client-name">Андрей Николаев</p>
-										<p class="client-adress">г. Москва</p>
+										</div>
 
 									</div>
+									
+								</li>
 
-								</div>
+								<li>
 
-							</div>
+									<div class="testimonial-sl">
 
+										<p class="testimonial-txt">Несмотря на сложности, искусство синхронизирует трансцендентальный гений. Партисипативное планирование нетривиально. Галактика, как следует из вышесказанного, рефлектирует трансцендентальный побочный PR-эффект.</p>
+										<div class="quote-triangle"></div>
+
+										<div class="testimonial-client">
+
+
+											<div class="client-photo-box">
+												<img class="client-photo" src="img/testimonial_photo.png" alt="Фото клиента">
+											</div>
+
+											<div class="client-info">
+
+												<p class="client-name">Андрей Николаев</p>
+												<p class="client-adress">г. Москва</p>
+
+											</div>
+
+										</div>
+
+									</div>
+									
+								</li>
+
+								<li>
+
+									<div class="testimonial-sl">
+
+										<p class="testimonial-txt">Несмотря на сложности, искусство синхронизирует трансцендентальный гений. Партисипативное планирование нетривиально. Галактика, как следует из вышесказанного, рефлектирует трансцендентальный побочный PR-эффект.</p>
+										<div class="quote-triangle"></div>
+
+										<div class="testimonial-client">
+
+
+											<div class="client-photo-box">
+												<img class="client-photo" src="img/testimonial_photo.png" alt="Фото клиента">
+											</div>
+
+											<div class="client-info">
+
+												<p class="client-name">Андрей Николаев</p>
+												<p class="client-adress">г. Москва</p>
+
+											</div>
+
+										</div>
+
+									</div>									
+
+								</li>
+
+								<li>
+
+									<div class="testimonial-sl">
+
+										<p class="testimonial-txt">Несмотря на сложности, искусство синхронизирует трансцендентальный гений. Партисипативное планирование нетривиально. Галактика, как следует из вышесказанного, рефлектирует трансцендентальный побочный PR-эффект.</p>
+										<div class="quote-triangle"></div>
+
+										<div class="testimonial-client">
+
+
+											<div class="client-photo-box">
+												<img class="client-photo" src="img/testimonial_photo.png" alt="Фото клиента">
+											</div>
+
+											<div class="client-info">
+
+												<p class="client-name">Андрей Николаев</p>
+												<p class="client-adress">г. Москва</p>
+
+											</div>
+
+										</div>
+
+									</div>
+									
+
+								</li>
+
+								<li>
+
+									<div class="testimonial-sl">
+
+										<p class="testimonial-txt">Несмотря на сложности, искусство синхронизирует трансцендентальный гений. Партисипативное планирование нетривиально. Галактика, как следует из вышесказанного, рефлектирует трансцендентальный побочный PR-эффект.</p>
+										<div class="quote-triangle"></div>
+
+										<div class="testimonial-client">
+
+
+											<div class="client-photo-box">
+												<img class="client-photo" src="img/testimonial_photo.png" alt="Фото клиента">
+											</div>
+
+											<div class="client-info">
+
+												<p class="client-name">Андрей Николаев</p>
+												<p class="client-adress">г. Москва</p>
+
+											</div>
+
+										</div>
+
+									</div>									
+
+								</li>
+
+								<li>
+
+									<div class="testimonial-sl">
+
+										<p class="testimonial-txt">Несмотря на сложности, искусство синхронизирует трансцендентальный гений. Партисипативное планирование нетривиально. Галактика, как следует из вышесказанного, рефлектирует трансцендентальный побочный PR-эффект.</p>
+										<div class="quote-triangle"></div>
+
+										<div class="testimonial-client">
+
+
+											<div class="client-photo-box">
+												<img class="client-photo" src="img/testimonial_photo.png" alt="Фото клиента">
+											</div>
+
+											<div class="client-info">
+
+												<p class="client-name">Андрей Николаев</p>
+												<p class="client-adress">г. Москва</p>
+
+											</div>
+
+										</div>
+
+									</div>									
+
+								</li>
 							
-							
+							</ul>
+
+							<button class="glyphicon testimonial-next"></button>
+
 						</div>
 
 					</div>
@@ -464,10 +664,16 @@
 
 		<!-- /Footer -->
 
+
+
 	<script src="js/scripts.js"></script>
 
-	  
+  <!--
 	<script src="slider/slider.js"></script>
+	-->
+
+
+
 
 	</div>
 

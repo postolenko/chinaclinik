@@ -20,12 +20,14 @@ var slidersHeight = [];
 
 var resizeWindowDone = false;
 
+var carouselArr = [];
+
 // var sliderWidth = document.getElementsByClassName("slider")[0].offsetWidth;
 // var slideWidth = document.getElementsByClassName("slide")[0].offsetWidth;
 
-$(".news-slide").css({"display":"none"});
+// $(".news-slide").css({"display":"none"});
 
-$(".news-slide:eq(0)").css({"display":"inline-block"});
+// $(".news-slide:eq(0)").css({"display":"inline-block"});
 
 var positionSlides;
 
@@ -45,8 +47,6 @@ var positionSlides;
     bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
 
 
-
-
 // function slideShow(sliderBox,thumbnailBox,prewBtn,nextBtn) {
 
 
@@ -55,207 +55,98 @@ var positionSlides;
 
 var countSlResize = Math.round( parseInt( $(".news-slider").css("width") ) / parseInt( $(".news-slide").css("width") ) );
 
-
-
-
-
-    prewBtn.click(function() {
-
-        var firstVisibleIndex =  $(".news-slide:visible").first().index();
-
-        var lastPrewVisibleSl = firstVisibleIndex - 1;
-        var firstPrewVisibleSl = firstVisibleIndex - countVisibleSlides;
-
-        console.log(firstVisibleIndex +"  "+firstPrewVisibleSl);
-
-        $(".news-slide").css({"display":"none"});
-        
-        for (countSlidesOnRow = firstPrewVisibleSl ; countSlidesOnRow <= lastPrewVisibleSl; countSlidesOnRow++) {
-
-            $(".news-slide:eq("+ countSlidesOnRow +")").stop().fadeIn(500);
-
-        }
-
-    });
-
-
-    nextBtn.click(function() {
-
-        countVisibleSlides = Math.round( parseInt( $(".news-slider").css("width") ) / parseInt( $(".news-slide").css("width") ) );
-
-
-        lastVisibleIndex = $(".news-slide:visible").last().index();
-        var firstSlNextBtn = $(".news-slide:visible").first().index();
-
-        if(lastVisibleIndex == $(".news-slide").length - 1) {
-
-            lastVisibleIndex = -1;
-
-            console.log(lastVisibleIndex);
-
-        }
-
-        $(".news-slide").css({"display":"none"});
-
-      
-
-        // if(countVisibleSlides <= 1) {
-
-        //     if(firstSlNextBtn < $(".news-slide").length - 1) {
-
-        //         lastVisibleIndex = 1;
-
-        //         console.log(lastVisibleIndex);
-
-        //     }        
-
-        //     $(".news-slide:eq("+ (++firstSlNextBtn) +")").stop().fadeIn(500);
-
-        //     console.log(firstSlNextBtn);
-
-        // } else {
-
-            for (countSlidesOnRow = lastVisibleIndex + 1; countSlidesOnRow <= countVisibleSlides + lastVisibleIndex; ++countSlidesOnRow) {
-
-                $(".news-slide:eq("+ countSlidesOnRow +")").stop().fadeIn(500);
-
-
-            }
-
-            console.log(countSlidesOnRow);
-
-        // }
-
-        // lastVisibleIndex =  $(".news-slide:visible").last().index();
-
-    });
-
-
-
-
-
-    // function getWidthSliders() {
-       
-        // var countVisibleSlides = Math.round( parseInt( $(".row").css("width") ) / parseInt( $(".news-slide").css("width") ) );
-
-        var countVisibleSlides = Math.round( parseInt( $(".news-slider").css("width") ) / parseInt( $(".news-slide:eq(0)").css("width") ) );
-
         console.log(parseInt( $(".news-slider").css("width") ) +"    "+ parseInt( $(".news-slide:eq("+0+")").css("width") ) );
 
         var countSlidesOnRow = 0;
 
-        // if( countVisibleSlides == 1 ) {
-        //     countVisibleSlides = 2;
-        // }
+        $(".news-slider .news-slide").outerWidth(parseInt( $(".news-slide:eq("+0+")").css("width")) );
 
-        for (countSlidesOnRow = 0; countSlidesOnRow <= countVisibleSlides - 1; ++countSlidesOnRow) {
-
-            $(".news-slide:eq("+ countSlidesOnRow +")").css({"display":"inline-block"});
-
-        }
-
-        console.log (countVisibleSlides);
-            
-
-        for(countIndex = 0; countIndex <= $(".news-slide").length - 1; countIndex++) {
-
-            slidersHeight.push($(".news-slide:eq("+ countIndex +")").outerHeight(true));
-
-        }
+        $(".news-slider").width($(".news-slider .news-slide").width() * ($(".news-slider .news-slide").length) );
 
         console.log(countVisibleSlides);
 
 
         maxHeightOfSliders = Math.max.apply(null, slidersHeight);
 
-        // $(".news-slider").height(maxHeightOfSliders);
-
-    // }
-
-
-// }
-
-
 $(window).resize(function() {
 
-    var secondBodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
+    $(".news-slider .news-slide").outerWidth(parseInt( $(".news-slide:eq("+0+")").css("width")) );
 
-    if(bodyWidth != secondBodyWidth) {
-
-        clearInterval(setPosition);
-
-        var setPosition = setTimeout(function() {
-
-        var visibleSlOnResize = Math.round( parseInt( $(".news-slider").css("width") ) / parseInt( $(".news-slide").css("width") ) );
-
-        console.log(visibleSlOnResize +"   "+ countSlResize);    
-
-        var forCicklum = 0;    
-
-        if( visibleSlOnResize == 1 ) {
-
-            var indexVisible = $(".news-slide:visible").first().index();
-
-            $(".news-slide").css({"display":"none"});
-
-            $(".news-slide:eq("+ indexVisible +")").css({"display":"inline-block"});
-
-        }
-
-        if (countSlResize != visibleSlOnResize) {
-
-            var indexVisible = $(".news-slide:visible").first().index();
-
-            $(".news-slide").css({"display":"none"});
-
-            forCicklum = visibleSlOnResize - 1;
-
-            for (countSlResize = indexVisible; countSlResize <= (indexVisible + visibleSlOnResize - 1); countSlResize++) {
-
-                $(".news-slide:eq("+ countSlResize +")").css({"display":"inline-block"});
-
-            }
-
-        }
-
-             console.log(visibleSlOnResize +"   "+ countSlResize);
-
-
-
-        }, 100);
-
-
-      
-
-        // if(countVisibleSlides > 1) {
-
-            var firstStep =  $(".news-slide:visible").first().index();
-            var lastStep =  $(".news-slide:visible").last().index();
-
-        // } else {
-        //     var lastStep =  1;
-        // }
-
-        slidersHeight = [];
-
-        for(countIndex = firstStep; countIndex <= $(".news-slide").length - 1; countIndex++) {
-
-            // $(".news-slide:eq("+ countIndex +")").text(countIndex + 1);
-
-            slidersHeight.push($(".news-slide:eq("+ countIndex +")").outerHeight(true));
-
-        }
-
-        maxHeightOfSliders = Math.max.apply(null, slidersHeight);
-
-        // $(".news-slider").height(maxHeightOfSliders);
-
-
-        bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
-
-    }
+    $(".news-slider").width($(".news-slider .news-slide").width() * ($(".news-slider .news-slide").length) );
 
 });
+
+
+var positionNextBtn = $(".news-slider .news-slide").width();
+
+var positionPrewBtn = $(".news-slider .news-slide").width();
+
+
+var endPosition;
+
+var positionLastNews = $(".news-slider .news-slide:eq("+ ( $(".news-slider .news-slide").length - 1 ) +")").offset().left + $(".news-slider .news-slide:eq("+ ( $(".news-slider .news-slide").length - 1 ) +")").width();
+
+
+var step = 0;
+
+var endAnimation;
+
+var timeOutAnimation;
+
+
+    nextBtn.click(function() {
+
+        clearInterval(timeOutAnimation);
+
+        positionLastNews = $(".news-slider .news-slide:eq("+ ( $(".news-slider .news-slide").length - 1 ) +")").offset().left + $(".news-slider .news-slide:eq("+ ( $(".news-slider .news-slide").length - 1 ) +")").width();
+
+        if( positionLastNews >= $(window).width() ) {
+
+            timeOutAnimation = setTimeout(function() {
+
+                $(".news-slider").stop().animate({"margin-left": -positionNextBtn + "px" }, 600);
+
+                positionNextBtn += $(".news-slider .news-slide").width();
+
+            }, 300);
+
+        }
+
+        positionPrewBtn = parseInt( $(".news-slider").css("margin-left") );
+
+    });
+
+
+    prewBtn.click(function() {
+
+        // clearInterval(timeOutAnimation);
+        
+        if($(".news-slider .news-slide:eq(0)").offset().left <= 0) {
+
+            // timeOutAnimation = setTimeout(function() {
+
+                // positionPrewBtn = parseInt( $(".news-slider").css("margin-left") );
+
+                $(".news-slider").stop().animate({"margin-left": positionPrewBtn + "px" }, 600);
+
+                positionPrewBtn += $(".news-slider .news-slide").width();              
+
+                positionNextBtn = parseInt( $(".news-slider").css("margin-left") );
+
+                console.log(positionPrewBtn);
+
+            // },300);
+
+        }
+   
+    });
+
+
+
+
+
+
+
 
 
 
