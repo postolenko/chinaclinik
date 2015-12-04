@@ -1,21 +1,10 @@
 $(document).ready(function() {
 
-// $("body").css({"padding-top": $(".head-section").height() + "px"});
-
-
-    // var oddThumbnail = document.getElementsByClassName("testimonial-txt")[1];
-
-    // oddThumbnail.styleText = "background:rgba(158, 137, 112, .8); margin:30px 0 0 -20px";
-    
-// 
-
     var w = window,
     d = document,
     e = d.documentElement,
     g = d.getElementsByTagName('body')[0],
     bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
-
-//
 
 $(".top-triangle").css({"border-left":$(".main-navigation").width() + 20 + "px solid transparent"});
 
@@ -37,12 +26,11 @@ $(window).resize( function() {
 
     if(bodyWidth >= 768) {
 
-    $(".testimonial-txt:odd").css({"margin":"30px 0 0 -20px"});
+        $(".testimonial-txt:odd").css({"margin":"30px 0 0 -20px"});
+
     } else {
 
-        $(".testimonial-txt:odd").css({"background": "rgba(158, 137, 112, .8)",
-                                        "margin":"0"
-                                    });
+        $(".testimonial-txt:odd").css({"margin":"0"});
     }
 
 
@@ -146,6 +134,19 @@ $(window).resize( function() {
             $(".navigationg-news-slider .next").click(function() {
 
                 $(".news_slider .flex-nav-next .flex-next").click();
+
+            });
+
+
+            $(".testimonials_slider .testimonial-prev").click(function() {
+
+                $(".testimonials_slider .flex-direction-nav .flex-nav-prev .flex-prev").click();
+
+            });
+
+            $(".testimonials_slider .testimonial-next").click(function() {
+
+                $(".testimonials_slider .flex-direction-nav .flex-nav-next .flex-next").click();
 
             });
 
