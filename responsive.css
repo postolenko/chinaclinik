@@ -1,14 +1,20 @@
 @media only screen and (max-width: 1240px) {
 
-    .testimonial-prev,
-    .testimonial-next {
+
+    /* Слайдер отзывов */
+
+    .flex-direction-nav {
+        display: none;
+    }
+
+    .testimonials_slider .testimonial-prev,
+    .testimonials_slider .testimonial-next {
         background-color: rgba(255, 255, 255, .2);
         background-image: none;
-        background-size: 40%;
-        width: 50px;
         height: 50px;
-        font-size: 40px;
-        line-height: 40px;
+        font-size: 30px;
+        line-height: 50px;
+        padding: 0;
         z-index: 3;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
@@ -22,13 +28,13 @@
         -moz-osx-font-smoothing: grayscale;
     }
 
-    .testimonial-prev {
+    .testimonials_slider .testimonial-prev {
         margin: -90px 0 0 0;
         left: 0;
     }
 
-    .testimonial-next {
-        margin: -90px 0 0 -5%;
+    .testimonials_slider .testimonial-next {
+        margin: -90px 0 0 -50px;
     }
 
     .testimonial-prev:before {
@@ -39,10 +45,37 @@
         content: "\e258";
     }
 
+    /* / Слайдер отзывов */
+
 }
 
 
+
+@media only screen and (max-width: 1100px) {
+
+    /* Навигационное меню */
+
+    .left-triangle,
+    .right-triangle,
+    .main-navigation:before {
+        display: none;
+    }
+
+    .main-navigation-box {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* / Навигационное меню */
+
+}
+
+
+
 @media only screen and (max-width: 940px) {
+
+
 
     .news-slide {
         width: 33.33%;
@@ -56,20 +89,13 @@
         padding: 7%;
     }
 
-    .footer-col {
-        /*width: 100%;*/
-    }
-
     .footer-btn-box {
         display: block;
         width: 100%;
-        /*float: right;*/
     }
 
     .footer-btn {
         display: block;
-        /*width: 100%;*/
-        /*float: left;*/
         margin: 20px auto;
     }
 
@@ -88,36 +114,47 @@
         padding: 0 1%;
     }
 
+    /* Главный заголовок */
+
     .main-head {
         font-size: 42px;
         line-height: 43px
     }
 
-    .news-slide {
-        width: 50%;
-    }
+    /* / Главный заголовок */
+
+    /* Секция Информационного блока */
 
     .article-box {
         width: 50%;
     }
 
-  /*  .testimonial-sl {
-        width: 100%;
-    }*/
+    /*  / Секция Информационного блока */
+
+    /* Слайдер Новостей */
+
+    .news-slide {
+        width: 50%;
+    }
+
+    /*  / Слайдер Новостей */
+
+
+    /* Слайдер Отзывов */
 
     .testimonials_slider .slides li {
         width: 100%;
     }
+
+    /*  / Слайдер Отзывов */
+
+    /* Подвал */
 
     .footer-col {
         width: 100%;
         text-align: center;
     }
 
-/*    .logo-footer-text {
-        margin: 23px 0 0 10px;
-    }
-*/
     .footer-logo-headers {
         margin: 15px 0;
     }
@@ -127,19 +164,28 @@
         line-height: 23px;
     }
 
-/*    .footer-btn {
-        display: block;
-        width: 70%;
-        float: none;
-        margin: 20px auto;
+    /* / Подвал */
+
+
+    /*Inner Page*/
+
+    .headers-inner-page {
+        width: 100%;
+        text-align: center;
+        margin: 0;
     }
 
-    .social-networks {
-        width: 100%;
-        float: none;
-        padding: 13px 0;
-        text-align: center;
-    }*/
+    .bread-crumbs {
+        margin: 10px 0 0 0;
+    }
+
+    .tab-link {
+        width: 31%;
+    }
+
+    /* / Inner Page*/
+
+
 
 }
 
@@ -153,7 +199,7 @@
 
     .logo {
         width: 260px;
-        margin: 0 auto 25px auto;
+        margin: 20px auto;
     }
 
     .main-head {
@@ -161,14 +207,101 @@
         line-height: 38px
     }
 
+    .main-navigation-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        background: rgba(50, 81, 10, .9);
+        height: 30px;
+        width: 100%;
+    }
+
+    .main-menu-btn {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .main-navigation {
+        background: rgba(50, 81, 10, .8);
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding: 30px 0 0 0;
+        position: fixed;
+        width: 150%;
+        top: -110%;
+        left: -25%;
+        height: 100vh;
+    
+        -webkit-transition-property: top;
+        -webkit-transition-duration: 0.4s;
+        -webkit-transition-timing-function: ease;
+
+        -moz-transition-property: top;
+        -moz-transition-duration: 0.4s;
+        -moz-transition-timing-function: ease;
+
+        -ms-transition-property: top;
+        -ms-transition-duration: 0.4s;
+        -ms-transition-timing-function: ease;
+
+        -o-transition-property: top;
+        -o-transition-duration: 0.4s;
+        -o-transition-timing-function: ease;
+
+        transition-property: top;
+        transition-duration: 0.4s;
+        transition-timing-function: ease;
+    }
+
+    .showed {
+        top: 0%;
+    }
+
+    .main-navigation .nav-item {        
+        width: 100%;
+
+        -webkit-transition-property: background opacity;
+        -webkit-transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease;
+
+        -moz-transition-property: background opacity;
+        -moz-transition-duration: 0.3s;
+        -moz-transition-timing-function: ease;
+
+        -ms-transition-property: background opacity;
+        -ms-transition-duration: 0.3s;
+        -ms-transition-timing-function: ease;
+
+        -o-transition-property: background opacity;
+        -o-transition-duration: 0.3s;
+        -o-transition-timing-function: ease;
+
+        transition-property: background opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+
+    }
+
+
+    .main-navigation .nav-item .nav-link {
+        display: block;
+        width: 100%;
+        padding: 5px 18% 4px 18%;
+    }
+
+    .main-navigation .nav-item:hover {
+        background: rgba(50, 81, 10, .5);
+    }
+
+    .sec-head-box {
+        margin: 0;
+    }
+
     .send-btn {
         padding: 15px 0;
         width: 90%;
     }
-
-/*    .news-slide {
-        width: 100%;
-    }*/
 
     .news-head {
         display: block;
@@ -182,18 +315,26 @@
         width: 100%;
     }
 
+    .testimonials-bg {
+        padding: 60px 0 10px 0;
+    }
+
+    .testimonials_slider .slide {
+        width: 400px;
+    }
+
     .article-box {
         width: 100%;
+        border-bottom: 1px solid #dfdfdf;
+    }
+
+    .article-box:last-child {
+        border-bottom: none;
     }
 
     .logo-footer {
         width: 290px;
     }
-/*
-    .footer-logo-headers {
-        margin: -21px 0 0 35%;
-        text-align: left;
-    }*/
 
     .footer-nav {
         width: 100%;
@@ -212,28 +353,78 @@
         line-height: 30px;
     }
 
-/*    .footer-btn {
-        width: 90%;
+
+/* Inner Page */
+
+    .inner-page-head {
+        font-size: 26px;
     }
 
-    .footer-navigation {
-        margin: 20px 0;
+    .inner-page-head {
+        text-align: center;
     }
 
-    .social-networks {
+    .article-image-box,
+    .tab-images-thumbs {
+        float: none;
+        width: 100%;
+    }
+
+    .quote-innerpage .quo-txt p {
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    .quote-innerpage:before {
+        background-size: 75%;
+    }
+
+    .quote-innerpage:after {
+        display: none;
+    }
+
+    .tab-link {
+        width: 100%;
+    }
+
+    .field-name {
+        display: none;
+    }
+
+    .field-enter-box {
         width: 100%;
         float: none;
-        padding: 13px 0;
-        text-align: center;
-    }*/
+    }
+
+    .field-enter-box button {
+        width: 100%;
+    }
+
+    .table {
+        display: none;
+    }
+
+    .important-icon p {
+        display: block;
+        width: 100%;
+        height:20px;
+        white-space: nowrap;
+        transform: rotate(-90deg);
+    }
+
+    .important-icon p:before {
+        display: none;
+    }
+
+    .right-tr-important {
+        display: none;
+    }
 
 }
 
-@media only screen and (max-width: 320px) {
+/*@media only screen and (max-width: 320px) {
 
-/*    .main-head {
-        font-size: 33px;
-        line-height: 36px
-    }*/
 
-}
+
+}*/

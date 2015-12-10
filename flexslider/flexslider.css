@@ -52,24 +52,9 @@
 
 /* Control Nav */
 
-.flex-control-nav {
-	margin-left: -31px; 
-	position: absolute; 
-	bottom: -30px; left: 50%;
-}
-
+/*.flex-control-nav {margin-left: -31px; position: absolute; bottom: -30px; left: 50%;}
 .flex-control-nav li {margin: 0 0 0 5px; float: left;}
-
 .flex-control-nav li:first-child {margin: 0;}
-
-.flex-control-nav li a {
-	width: 13px; 
-	height: 13px; 
-	display: inline-block; 
-	cursor: pointer; 
-	text-indent: -9999px;
-	opacity: 0;
-}
-
+.flex-control-nav li a {width: 13px; height: 13px; display: block; cursor: pointer; text-indent: -9999px;}
 .flex-control-nav li a:hover {background-position: 0 -13px;}
-.flex-control-nav li a.active {background-position: 0 -26px; cursor: default;}
+.flex-control-nav li a.active {background-position: 0 -26px; cursor: default;}*/
