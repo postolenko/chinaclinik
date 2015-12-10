@@ -1081,7 +1081,7 @@ header:after {
     position: absolute;
     top: 50%;
     left: 100%;
-    margin: -90px 0 0 6%;
+    margin: -90px 0px 0px 4%;
     border: none;
     background-color: transparent;
     background-image: url(img/right_arrow_tes_sl.png);
