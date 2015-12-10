@@ -1612,8 +1612,9 @@ header:after {
     background-position: right 0px;
     padding: 0 0 0 2%;
     -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
     appearance: none;
-
 }
 
 .field-enter-box select option {
