@@ -105,6 +105,7 @@ footer {
     background-image: url(img/social_icons_sprite.png);
     background-repeat: no-repeat;
     margin: 0 4px;
+    background-position-y: 0;
 }
 
 .social-link:hover {
