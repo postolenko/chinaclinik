@@ -105,7 +105,6 @@ footer {
     background-image: url(img/social_icons_sprite.png);
     background-repeat: no-repeat;
     margin: 0 4px;
-    background-position-y: 0;
 }
 
 .social-link:hover {
@@ -113,23 +112,43 @@ footer {
 }
 
 .twitter {
-    background-position-x: 0;
+    background-position: 0 0;
+}
+
+.twitter:hover {
+    background-position: 0 -48px;
 }
 
 .vk {
-    background-position-x: -33px;
+    background-position: -33px 0;
+}
+
+.vk:hover {
+    background-position: -33px -48px;
 }
 
 .facebook {
-    background-position-x: -67px;
+    background-position: -67px 0;
+}
+
+.facebook:hover {
+    background-position: -67px -48px;
 }
 
 .mailru {
-    background-position-x: -101px;
+    background-position: -101px 0;
+}
+
+.mailru:hover {
+    background-position: -101px -48px;
 }
 
 .od {
-    background-position-x: -134px;
+    background-position: -134px 0;
+}
+
+.od:hover {
+    background-position: -134px -48px;
 }
 
 .footer-nav {
